@@ -1,0 +1,37 @@
+{
+    "url": "index.html",
+    "icon": "mxcpbenefits-of-adding-video-to-my-website.png",
+    "developer": {
+        "name": "Muz",
+        "url": ""
+    },
+    "version": "0.0.1",
+    "role": "system",
+    "permissions": "*",
+    "window": {
+        "width": 600,
+        "height": 350
+    },
+    "locales": {
+        "en-US": {
+            "name": "Bookmark",
+            "description": "Bookmark Manager"
+        },
+        "de": {
+            "name": "Lesezeichen",
+            "description": "Lesezeichenverwaltung"
+        },
+        "el": {
+            "name": "Σελιδοδείκτης",
+            "description": "Διαχείριση Σελιδοδείκτη"
+        },
+        "es": {
+            "name": "Marcadores",
+            "description": "Administrador de marcadores"
+        },
+        "ru": {
+            "name": "Видео",
+            "description": "Управление закладками"
+        }
+    }
+}

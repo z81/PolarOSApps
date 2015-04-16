@@ -1,0 +1,42 @@
+{
+    "url": "index.html",
+    "icon": "mxcpApps-background-icon.png",
+    "developer": {
+        "name": "Muz",
+        "url": ""
+    },
+    "version": "0.0.1",
+    "description": "First App",
+    "role": "system",
+    "permissions": "*",
+    "window": {
+        "width": 600,
+        "height": 350
+    },
+    "locales": {
+        "en-US": {
+            "name": "Bookmark",
+            "description": "Bookmark Manager"
+        },
+        "de": {
+            "name": "Lesezeichen",
+            "description": "Lesezeichenverwaltung"
+        },
+        "el": {
+            "name": "Σελιδοδείκτης",
+            "description": "Διαχείριση Σελιδοδείκτη"
+        },
+        "es": {
+            "name": "Marcadores",
+            "description": "Administrador de marcadores"
+        },
+        "eu": {
+            "name": "Laster-marka",
+            "description": "Laster-marken kudeatzailea"
+        },
+        "ru": {
+            "name": "UI TEST",
+            "description": "Управление закладками"
+        }
+    }
+}

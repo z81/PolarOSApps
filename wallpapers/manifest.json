@@ -1,0 +1,26 @@
+{
+    "url": "index.html",
+    "icon": "mxcpxcode_icon.png",
+    "developer": {
+        "name": "Muz",
+        "url": ""
+    },
+    "version": "0.0.1",
+    "description": "First App",
+    "role": "system",
+    "permissions": "*",
+    "window": {
+        "width": 700,
+        "height": 500
+    },
+    "locales": {
+        "en-US": {
+            "name": "Bookmark",
+            "description": "Bookmark Manager"
+        },
+        "ru": {
+            "name": "Фон",
+            "description": "Управление закладками"
+        }
+    }
+}

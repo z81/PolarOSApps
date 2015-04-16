@@ -1,0 +1,22 @@
+{
+    "url": "index.html",
+    "icon": "mxcpxcode_icon.png",
+    "developer": {
+        "name": "Muz",
+        "url": ""
+    },
+    "version": "0.0.1",
+    "description": "",
+    "role": "system",
+    "permissions": "*",
+    "locales": {
+        "en-US": {
+            "name": "PDF Reader",
+            "description": ""
+        },
+        "ru": {
+            "name": "PDF Reader",
+            "description": ""
+        }
+    }
+}

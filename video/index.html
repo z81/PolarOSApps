@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../../vendor.js"></script>
+	<script src="../../apps_api.js"></script>
+	<script src="../../ui.js"></script>
+	<style>
+		body{
+			margin: 10px;
+		}
+	</style>
+	<script>
+	$(function(){
+		$('.ui.checkbox')
+  			.checkbox()
+
+  		$('.dropdown')
+		  .dropdown({
+		    // you can use any ui transition
+		    transition: 'drop'
+		  });
+
+
+		$('.message .close').on('click', function() {
+		  $(this).closest('.message').fadeOut();
+		});  
+
+		$('.accordion').accordion();
+
+	})
+	</script>
+</head>
+<body>
+	
+	<div class="button demo">
+  <div class="ui button">
+View
+  </div>
+  <div class="ui primary button">
+<i class="shop icon"></i> Add to Cart
+  </div>
+  <div class="ui secondary button">
+<i class="save icon"></i> Save for Later
+  </div>
+  <div class="ui labeled icon button">
+<i class="star icon"></i>
+Rate
+  </div>
+  <div class="ui basic button">Basic</div>
+
+  <div class="ui hidden divider"></div>
+
+  <div class="ui animated button">
+<div class="visible content">Horizontal</div>
+<div class="hidden content">
+  Hidden
+</div>
+  </div>
+  <div class="ui vertical animated button">
+<div class="visible content">Vertical</div>
+<div class="hidden content">
+  Hidden
+</div>
+  </div>
+  <div class="ui animated fade button">
+<div class="visible content">Fade In</div>
+<div class="hidden content">
+  Hidden
+</div>
+  </div>
+
+  <div class="ui hidden divider"></div>
+
+  <div class="ui facebook button">
+<i class="facebook icon"></i>
+Facebook
+  </div>
+  <div class="ui twitter button">
+<i class="twitter icon"></i>
+Twitter
+  </div>
+  <div class="ui google plus button">
+<i class="google plus icon"></i>
+Google Plus
+  </div>
+
+  <div class="ui hidden divider"></div>
+  <div class="ui buttons">
+<div class="ui button">1</div>
+<div class="ui button">2</div>
+<div class="ui button">3</div>
+  </div>
+<div class="ui buttons">
+<div class="ui button">Cancel</div>
+<div class="or"></div>
+<div class="ui positive button">Save</div>
+  </div>
+
+  <div class="ui icon buttons">
+<div class="ui button"><i class="align left icon"></i></div>
+<div class="ui button"><i class="align center icon"></i></div>
+<div class="ui button"><i class="align right icon"></i></div>
+<div class="ui button"><i class="align justify icon"></i></div>
+  </div>
+  <div class="ui hidden divider"></div>
+  <div class="ui blue button">Blue</div>
+  <div class="ui red button">Red</div>
+  <div class="ui teal button">Teal</div>
+  <div class="ui blue basic button">Blue</div>
+  <div class="ui red basic button">Red</div>
+  <div class="ui teal basic button">Teal</div>
+
+  <div class="ui inverted segment">
+<div class="ui inverted button">Inverted</div>
+<div class="ui inverted blue button">Blue</div>
+<div class="ui inverted red button">Red</div>
+<div class="ui inverted basic button">Basic</div>
+<div class="ui inverted blue basic button">Blue</div>
+<div class="ui inverted red basic button">Red</div>
+  </div>
+
+  <div class="ui hidden divider"></div>
+
+  <div class="ui vertical buttons">
+<div class="ui button">Feed</div>
+<div class="ui button">Messages</div>
+<div class="ui button">Events</div>
+<div class="ui button">Photos</div>
+  </div>
+
+  <div class="ui vertical buttons">
+<div class="ui button">1</div>
+<div class="ui button">2</div>
+<div class="ui button">3</div>
+  </div>
+
+  <div class="ui vertical icon buttons">
+<div class="ui button"><i class="align left icon"></i></div>
+<div class="ui button"><i class="align center icon"></i></div>
+<div class="ui button"><i class="align right icon"></i></div>
+<div class="ui button"><i class="align justify icon"></i></div>
+  </div>
+
+<form class="ui form">
+  <h4 class="ui dividing header">Personal Information</h4>
+  <div class="two fields">
+    <div class="field">
+      <label>Name</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" name="last-name" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Gender</label>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="gender">
+        <div class="default text">Gender</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="male">Male</div>
+          <div class="item" data-value="female">Female</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>State</label>
+      <select class="ui search dropdown">
+        <option value="">State</option>
+        <option value="AL">Alabama</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+    <div class="field"></div>
+  </div>
+  <div class="field">
+    <label>Biography</label>
+    <textarea></textarea>
+  </div>
+  <h4 class="ui dividing header">Account Info</h4>
+  <div class="two fields">
+    <div class="required field">
+      <label>Username</label>
+      <div class="ui icon input">
+        <input type="text" placeholder="Username">
+        <i class="user icon"></i>
+      </div>
+    </div>
+    <div class="required field">
+      <label>Password</label>
+      <div class="ui icon input">
+        <input type="password">
+        <i class="lock icon"></i>
+      </div>
+    </div>
+  </div>
+   <h4 class="ui top attached header">Import Settings</h4>
+  <div class="ui bottom attached segment">
+    <div class="grouped fields">
+      <label for="alone">Would you like us to import your current settings?</label>
+      <div class="field">
+        <div class="ui radio checkbox checked">
+          <input type="radio" checked="" name="import">
+          <label>Yes</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="import">
+          <label>No</label>
+        </div>
+      </div>
+    </div>
+  </div>
+   <h4 class="ui dividing header">Settings</h4>
+  <h5 class="ui header">Privacy</h5>
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" name="privacy">
+      <label>Allow <b>anyone</b> to see my account</label>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui toggle checkbox">
+      <input type="radio" name="privacy">
+      <label>Allow <b>only friends</b> to see my account</label>
+    </div>
+  </div>
+  <h5 class="ui header">Newsletter Subscriptions</h5>
+  <div class="field">
+    <div class="ui slider checkbox">
+      <input type="checkbox" name="top-posts">
+      <label>Top Posts This Week</label>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui slider checkbox">
+      <input type="checkbox" name="hot-deals">
+      <label>Hot Deals</label>
+    </div>
+  </div>
+  <div class="ui hidden divider"></div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="hot-deals">
+      <label>I agree to the <a href="#">Terms of Service</a>.</label>
+    </div>
+  </div>
+  <div class="ui error message">
+    <div class="header">We noticed some issues</div>
+  </div>
+  <div class="ui submit button">Register</div>
+</form>
+
+
+<div class="ui left icon input loading">
+  <input type="text" placeholder="Search...">
+  <i class="search icon"></i>
+</div>
+<div class="ui divider"></div>
+<div class="ui icon input loading">
+  <input type="text" placeholder="Search...">
+  <i class="search icon"></i>
+</div>
+
+<div class="ui labeled input">
+  <div class="ui label">
+    http://
+  </div>
+  <input type="text" placeholder="mysite.com">
+</div>
+
+<div class="ui right labeled left icon input">
+  <i class="tags icon"></i>
+  <input type="text" placeholder="Enter categories">
+  <div class="ui tag label">
+    Tags
+  </div>
+</div>
+
+<div class="ui steps">
+  <div class="step">
+    <i class="truck icon"></i>
+    <div class="content">
+      <div class="title">Shipping</div>
+      <div class="description">Choose your shipping options</div>
+    </div>
+  </div>
+  <div class="active step">
+    <i class="payment icon"></i>
+    <div class="content">
+      <div class="title">Billing</div>
+      <div class="description">Enter billing information</div>
+    </div>
+  </div>
+  <div class="disabled step">
+    <i class="info icon"></i>
+    <div class="content">
+      <div class="title">Confirm Order</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="ui heart rating" data-rating="7" data-max-rating="10"></div>
+
+
+<div class="ui indicating progress">
+    <div class="bar"></div>
+    <div class="label">Funding</div>
+  </div>
+
+<div class="ui icon message">
+  <i class="notched circle loading icon"></i>
+  <div class="content">
+    <div class="header">
+      Just one second
+    </div>
+    <p>We're fetching that content for you.</p>
+  </div>
+</div>
+
+
+<div class="ui icon message">
+  <i class="inbox icon"></i>
+  <div class="content">
+    <div class="header">
+      Have you heard about our mailing list?
+    </div>
+    <p>Get the best news in your e-mail every day.</p>
+  </div>
+</div>
+
+<div class="ui message">
+  <i class="close icon"></i>
+  <div class="header">
+    Welcome back!
+  </div>
+  <p>This is a special notification which you can dismiss if you're bored with it.</p>
+</div>
+<div class="warning ui message">
+  <p>Dismissable blocks do not automatically close when using the close icon, this behavior must be defined using javascript, for example:</p>
+  <div class="ui existing secondary segment">test</div>
+</div>
+
+<div class="ui error message">
+  <i class="close icon"></i>
+  <div class="header">
+    There was some errors with your submission
+  </div>
+  <ul class="list">
+    <li>You must include both a upper and lower case letters in your password.</li>
+    <li>You need to select your home country.</li>
+  </ul>
+</div>
+
+<div class="ui attached message">
+  <div class="header">
+    Welcome to our site!
+  </div>
+  <p>Fill out the form below to sign-up for a new account</p>
+</div>
+<form class="ui form attached fluid segment">
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="First Name" type="text">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" type="text">
+    </div>
+  </div>
+  <div class="field">
+    <label>Username</label>
+    <input placeholder="Username" type="text">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password">
+  </div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+  </div>
+  <div class="ui blue submit button">Submit</div>
+</form>
+<div class="ui bottom attached warning message">
+  <i class="icon help"></i>
+  Already signed up? <a href="#">Login here</a> instead.
+</div>
+
+
+<div class="ui input error">
+  <input type="text" placeholder="Search...">
+</div>
+
+
+<form class="ui fluid form">
+  <div class="field">
+    <input type="text" placeholder="First name">
+    <div class="ui pointing label">
+      Please enter a value
+    </div>
+  </div>
+  <div class="ui simple divider"></div>
+  <div class="field" placeholder="Last Name">
+    <div class="ui pointing below label">
+      Please enter a value
+    </div>
+    <input type="text">
+  </div>
+  <div class="ui simple divider"></div>
+  <div class="inline field">
+    <input type="text" placeholder="Username">
+    <div class="ui pointing left label">
+      That name is taken!
+    </div>
+  </div>
+  <div class="ui simple divider"></div>
+  <div class="inline field">
+    <div class="ui pointing right label">
+      Your password must be 6 characters or more
+    </div>
+    <input type="password">
+  </div>
+</form>
+
+<div class="yellow ui message">A corner label must be positioned inside a container with <b>position: relative</b> to display properly. If a container is rounded you will need to add <code>overflow:hidden</code> to the container to produce a rounded label.</div>
+<div class="ui two column grid">
+  <div class="column">
+    <div class="ui fluid image">
+      <a class="ui left red corner label">
+        <i class="heart icon"></i>
+      </a>
+      <img src="/images/wireframe/image.png">
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid image">
+      <a class="ui black corner label">
+        <i class="save icon"></i>
+      </a>
+      <img src="/images/wireframe/image.png">
+    </div>
+  </div>
+</div>
+
+
+<a class="ui tag label">New</a>
+<a class="ui red tag label">Upcoming</a>
+<a class="ui teal tag label">Featured</a>
+
+<div class="ui two column grid">
+  <div class="column">
+    <div class="ui raised segment">
+      <a class="ui ribbon label">Label</a>
+      <span>Inline Text</span>
+      <p></p>
+      <a class="ui teal ribbon label">Label</a>
+      <p></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <a class="ui right ribbon label">Label</a>
+      <p></p>
+      <a class="ui teal right ribbon label">Label</a>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<div class="ui bottom left attached label">User View</div>
+<div class="ui bottom right attached label">Admin View</div>
+
+
+<div class="ui divided selection list">
+  <a class="item">
+    <div class="ui red horizontal label">Fruit</div>
+    Kumquats
+  </a>
+  <a class="item">
+    <div class="ui purple horizontal label">Candy</div>
+    Ice Cream
+  </a>
+  <a class="item">
+    <div class="ui red horizontal label">Fruit</div>
+    Orange
+  </a>
+  <a class="item">
+    <div class="ui horizontal label">Dog</div>
+    Poodle
+  </a>
+</div>
+
+
+
+<a class="ui black circular label">
+  12
+</a>
+<a class="ui green circular label">
+  11
+</a>
+<a class="ui red circular label">
+  10
+</a>
+<a class="ui blue circular label">
+  64
+</a>
+<a class="ui purple circular label">
+  62
+</a>
+<a class="ui teal circular label">
+  1
+</a>
+
+
+<div class="ui compact menu">
+  <a class="item">
+    <i class="icon mail"></i> Messages
+    <div class="floating ui red label">22</div>
+  </a>
+  <a class="item">
+    <i class="icon users"></i> Friends
+    <div class="floating ui teal label">22</div>
+  </a>
+</div>
+
+<div class="ui styled accordion">
+    <div class="active title">
+      <i class="dropdown icon"></i>
+      What is a dog?
+    </div>
+    <div class="active content">
+      <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+    </div>
+    <div class="title">
+      <i class="dropdown icon"></i>
+      What kinds of dogs are there?
+    </div>
+    <div class="content">
+      <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+    </div>
+    <div class="title">
+      <i class="dropdown icon"></i>
+      How do you acquire a dog?
+    </div>
+    <div class="content">
+      <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+      <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+    </div>
+  </div>
+
+
+  <div class="ui vertical accordion menu">
+    <div class="item">
+      <a class="active title">
+        <i class="dropdown icon"></i>
+        Size
+      </a>
+      <div class="active content">
+        <div class="ui form">
+          <div class="grouped fields">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="small">
+                <label>Small</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="medium">
+                <label>Medium</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="large">
+                <label>Large</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="x-large">
+                <label>X-Large</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <a class="title">
+        <i class="dropdown icon"></i>
+        Colors
+      </a>
+      <div class="content">
+        <div class="ui form">
+          <div class="grouped fields">
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="small">
+                <label>Red</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="medium">
+                <label>Orange</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="large">
+                <label>Green</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="x-large">
+                <label>Blue</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui center aligned compact segment">
+  <div class="ui left icon action input">
+    <i class="search icon"></i>
+    <input type="text" placeholder="Order #">
+    <div class="ui blue submit button">Search</div>
+  </div>
+  <div class="ui horizontal divider">
+    Or
+  </div>
+  <div class="ui teal labeled icon button">
+    Create New Order
+    <i class="add icon"></i>
+  </div>
+</div>
+
+
+<div class="ui piled segment">
+  <h4 class="ui header">A header</h4>
+  <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+   <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+   <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
+</div>
+
+<div class="ui blue segment">
+  Blue
+</div>
+<div class="ui orange segment">
+  Orange
+</div>
+<div class="ui green segment">
+  Green
+</div>
+<div class="ui red segment">
+  Red
+</div>
+<div class="ui purple segment">
+  Purple
+</div>
+<div class="ui teal segment">
+  Teal
+</div>
+
+<div class="ui primary segment">
+  <p>I'm here to tell you something, and you will probably read me first.</p>
+</div>
+<div class="ui secondary segment">
+  <p>I am pretty noticeable but you might check out other content before you look at me.</p>
+</div>
+<div class="ui tertiary segment">
+  <p>If you notice me you must be looking very hard.</p>
+</div>
+
+<div class="ui right aligned segment">
+  Right
+</div>
+<div class="ui left aligned segment">
+  Left
+</div>
+<div class="ui center aligned segment">
+  Center
+</div>
+
+
+<div class="ui circular segment">
+  <h2 class="ui header">
+    Buy
+    <div class="sub header">$10.99</div>
+  </h2>
+</div>
+<div class="ui inverted circular segment">
+  <h2 class="ui inverted header">
+    Buy
+    <div class="sub header">$10.99</div>
+  </h2>
+</div>
+
+<div class="ui blue inverted segment">
+  Blue
+</div>
+<div class="ui orange inverted segment">
+  Orange
+</div>
+<div class="ui green inverted segment">
+  Green
+</div>
+<div class="ui red inverted segment">
+  Red
+</div>
+<div class="ui purple inverted segment">
+  Purple
+</div>
+<div class="ui teal inverted segment">
+  Teal
+</div>
+
+<h5 class="ui top attached header">
+  Dogs
+</h5>
+<div class="ui attached segment">
+  <p>Dogs are one type of animal</p>
+</div>
+<h5 class="ui attached header">
+  Cats
+</h5>
+<div class="ui attached segment">
+  <p>Cats are thought of as being related to dogs, but only humans think this.</p>
+</div>
+<h5 class="ui attached header">
+  Lions
+</h5>
+<div class="ui attached segment">
+  <p>Humans don't think of lions as being like cats, but they are.</p>
+</div>
+<div class="ui bottom attached warning message">
+  <i class="warning icon"></i>
+  You've reached the end of this content segment!
+</div>
+
+<div class="ui card">
+  <div class="image">
+    <img src="/images/avatar/large/stevie.jpg">
+  </div>
+  <div class="content">
+    <a class="header">Stevie Feliciano</a>
+    <div class="meta">
+      <span class="date">Joined in 2014</span>
+    </div>
+    <div class="description">
+      Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      22 Friends
+    </a>
+  </div>
+</div>
+
+
+<div class="ui cards">
+  <div class="card">
+    <div class="content">
+      <div class="header">Elliot Fu</div>
+      <div class="meta">Friend</div>
+      <div class="description">
+        Elliot Fu is a film-maker from New York.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Veronika Ossi</div>
+      <div class="meta">Friend</div>
+      <div class="description">
+        Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Jenny Hess</div>
+      <div class="meta">Friend</div>
+      <div class="description">
+        Jenny is a student studying Media Management at the New School
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui card">
+  <div class="content">
+    <div class="header">Cute Dog</div>
+    <div class="meta">2 days ago</div>
+    <div class="description">
+      <p>Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their adorable faces, others for their tiny stature, and even others for their massive size.</p>
+      <p>Many people also have their own barometers for what makes a cute dog.</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <i class="check icon"></i>
+    121 Votes
+  </div>
+</div>
+
+
+<div class="ui link card">
+  <div class="content">
+    <div class="header">Cute Dog</div>
+    <div class="meta">
+      <span class="category">Animals</span>
+    </div>
+    <div class="description">
+      <p></p>
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="right floated author">
+      <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+    </div>
+  </div>
+</div>
+
+
+<div class="ui four cards">
+  <a class="black card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="blue card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="green card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="orange card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="pink card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="purple card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="red card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="teal card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+  <a class="yellow card">
+    <div class="image">
+      <img>
+    </div>
+  </a>
+</div>
+
+<div class="ui four cards">
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="4"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="2"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="3"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="4"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="3"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="3"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="4"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="4"></div>
+    </div>
+  </div>
+</div>
+
+<div class="ui floating dropdown labeled search icon button">
+    <i class="world icon"></i>
+    <span class="text">Select Language</span>
+    <div class="menu">
+      <div class="item">Arabic</div>
+      <div class="item">Chinese</div>
+      <div class="item">Danish</div>
+      <div class="item">Dutch</div>
+      <div class="item">English</div>
+      <div class="item">French</div>
+      <div class="item">German</div>
+      <div class="item">Greek</div>
+      <div class="item">Hungarian</div>
+      <div class="item">Italian</div>
+      <div class="item">Japanese</div>
+      <div class="item">Korean</div>
+      <div class="item">Lithuanian</div>
+      <div class="item">Persian</div>
+      <div class="item">Polish</div>
+      <div class="item">Portuguese</div>
+      <div class="item">Russian</div>
+      <div class="item">Spanish</div>
+      <div class="item">Swedish</div>
+      <div class="item">Turkish</div>
+      <div class="item">Vietnamese</div>
+    </div>
+  </div>
+
+
+  <div class="ui upward selection dropdown">
+    <input type="hidden" name="gender">
+    <i class="dropdown icon"></i>
+    <div class="default text">Gender</div>
+    <div class="menu">
+      <div class="item" data-value="male" data-text="Male">
+        <i class="male icon"></i>
+        Male
+      </div>
+      <div class="item" data-value="female" data-text="Female">
+        <i class="female icon"></i>
+        Female
+      </div>
+    </div>
+  </div>
+
+
+<div class="ui floating labeled icon dropdown button">
+    <i class="dropdown icon"></i>
+    <span class="text">Menu</span>
+    <div class="left menu">
+      <div class="item">
+        <i class="dropdown icon"></i>
+        <span class="text">Left</span>
+        <div class="menu">
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Still Left</span>
+            <div class="menu">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="dropdown icon"></i>
+        <span class="text">Left 2</span>
+        <div class="menu">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="ui vertical menu">
+  <a class="active teal item">
+    Inbox
+    <div class="ui teal label">1</div>
+  </a>
+  <a class="item">
+    Spam
+    <div class="ui label">51</div>
+  </a>
+  <a class="item">
+    Updates
+    <div class="ui label">1</div>
+  </a>
+  <div class="item">
+    <div class="ui transparent icon input">
+      <input type="text" placeholder="Search mail...">
+      <i class="search icon"></i>
+    </div>
+  </div>
+</div> 
+
+
+<div class="ui pagination menu">
+  <a class="icon item">
+    <i class="left arrow icon"></i>
+  </a>
+  <a class="active item">
+    1
+  </a>
+  <div class="disabled item">
+    ...
+  </div>
+  <a class="item">
+    10
+  </a>
+  <a class="item">
+    11
+  </a>
+  <a class="item">
+    12
+  </a>
+  <a class="icon item">
+    <i class="right arrow icon"></i>
+  </a>
+</div>
+
+
+<div class="ui vertical menu">
+  <div class="item">
+    <div class="ui input"><input type="text" placeholder="Search..."></div>
+  </div>
+  <div class="item">
+    <i class="home icon"></i> Home
+    <div class="menu">
+      <a class="active item">Search</a>
+      <a class="item">Add</a>
+      <a class="item">Remove</a>
+    </div>
+  </div>
+  <a class="item">
+    <i class="grid layout icon"></i> Browse
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <div class="ui dropdown item">
+    More
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <a class="item"><i class="edit icon"></i> Edit Profile</a>
+      <a class="item"><i class="globe icon"></i> Choose Language</a>
+      <a class="item"><i class="settings icon"></i> Account Settings</a>
+    </div>
+  </div>
+</div>
+
+<div class="ui pointing menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <div class="ui dropdown item">
+      Language
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item">English</a>
+        <a class="item">Russian</a>
+        <a class="item">Spanish</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui green inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+<div class="ui red inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+<div class="ui blue inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+<div class="ui orange inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+<div class="ui purple inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+<div class="ui teal inverted menu">
+  <a class="active item">
+    <i class="home icon"></i> Home
+  </a>
+  <a class="item">
+    <i class="mail icon"></i> Messages
+  </a>
+  <a class="item">
+    <i class="user icon"></i> Friends
+  </a>
+</div>
+
+
+<table class="ui celled striped table">
+  <thead>
+    <tr><th colspan="3">
+      Git Repository
+    </th>
+  </tr></thead><tbody>
+    <tr>
+      <td class="collapsing">
+        <i class="folder icon"></i> node_modules
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned collapsing">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> test
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> build
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> package.json
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> Gruntfile.js
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="ui celled structured table">
+  <thead>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th rowspan="2">Type</th>
+      <th rowspan="2">Files</th>
+      <th colspan="3">Languages</th>
+    </tr>
+    <tr>
+      <th>Ruby</th>
+      <th>JavaScript</th>
+      <th>Python</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alpha Team</td>
+      <td>Project 1</td>
+      <td>2</td>
+      <td>
+        <i class="large green checkmark icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="3">Beta Team</td>
+      <td>Project 1</td>
+      <td>52</td>
+      <td>
+        <i class="large green checkmark icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Project 2</td>
+      <td>12</td>
+      <td></td>
+      <td>
+        <i class="large green checkmark icon"></i>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Project 3</td>
+      <td>21</td>
+      <td>
+        <i class="large green checkmark icon"></i>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No Name Specified</td>
+      <td>Unknown</td>
+      <td class="negative">None</td>
+    </tr>
+    <tr class="positive">
+      <td>Jimmy</td>
+      <td><i class="icon checkmark"></i> Approved</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Jamie</td>
+      <td>Unknown</td>
+      <td class="positive"><i class="icon close"></i> Requires call</td>
+    </tr>
+    <tr class="negative">
+      <td>Jill</td>
+      <td>Unknown</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No Name Specified</td>
+      <td>Unknown</td>
+      <td>None</td>
+    </tr>
+    <tr class="warning">
+      <td>Jimmy</td>
+      <td><i class="attention icon"></i> Requires Action</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Jamie</td>
+      <td>Unknown</td>
+      <td class="warning"><i class="attention icon"></i> Hostile</td>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Unknown</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="ui inverted table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Approved</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Jamie</td>
+      <td>Approved</td>
+      <td>Requires call</td>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Denied</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><th>3 People</th>
+    <th>2 Approved</th>
+    <th></th>
+  </tr></tfoot>
+</table>
+
+<div class="ui warning message">Adding a classname of <code>ascending</code> or <code>descending</code> to the <code>th</code> will show the user the direction of sort. This example uses a modified version of the kylefox's <a href="https://github.com/kylefox/jquery-tablesort">tablesort plugin</a> to provide the proper class names.
+</div>
+<table class="ui sortable celled table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>No Action</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Jamie</td>
+      <td class="positive">Approved</td>
+      <td class="warning">Requires call</td>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td class="negative">Denied</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr><th>3 People</th>
+    <th>2 Approved</th>
+    <th></th>
+  </tr></tfoot>
+</table>
+
+<table class="ui compact celled definition table">
+  <thead class="full-width">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Registration Date</th>
+      <th>E-mail address</th>
+      <th>Premium Plan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td>John Lilki</td>
+      <td>September 14, 2013</td>
+      <td>jhlilk22@yahoo.com</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td>Jamie Harington</td>
+      <td>January 11, 2014</td>
+      <td>jamieharingonton@yahoo.com</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td>Jill Lewis</td>
+      <td>May 11, 2014</td>
+      <td>jilsewris22@yahoo.com</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="4">
+        <div class="ui right floated small primary labeled icon button">
+          <i class="user icon"></i> Add User
+        </div>
+        <div class="ui small  button">
+          Approve
+        </div>
+        <div class="ui small  disabled button">
+          Approve All
+        </div>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+
+<div class="ui card" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">
+    <div class="image">
+      <img src="/images/movies/totoro-horizontal.jpg">
+    </div>
+    <div class="content">
+      <div class="header">My Neighbor Totoro</div>
+      <div class="description">
+        Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+      </div>
+    </div>
+    <div class="ui two bottom attached buttons">
+      <div class="ui button">
+        <i class="add icon"></i>
+        Queue
+      </div>
+      <div class="ui primary button">
+        <i class="play icon"></i>
+        Watch
+      </div>
+    </div>
+  </div>
+
+<div class="ui mini statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+<div class="ui tiny statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+<div class="ui small statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+<div class="ui statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+<div class="ui large statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+<div class="ui huge statistic">
+  <div class="value">
+    22
+  </div>
+  <div class="label">
+    Breeds of Dog
+  </div>
+</div>
+
+<div class="ui divided items">
+  <div class="item">
+    <div class="ui tiny image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="middle aligned content">
+      Content A
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui tiny image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="middle aligned content">
+      Content B
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui tiny image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="middle aligned content">
+      Content C
+    </div>
+  </div>
+</div>
+
+<div class="ui yellow message">
+  <i class="star icon"></i>
+  To make the entire content of a item link, check out the link variation below
+</div>
+<div class="ui items">
+  <div class="item">
+    <a class="ui tiny image">
+      <img src="/images/avatar/large/stevie.jpg">
+    </a>
+    <div class="content">
+      <a class="header">Stevie Feliciano</a>
+      <div class="description">
+        <p>Stevie Feliciano is a <a>library scientist</a> living in New York City. She likes to spend her time reading, running, and writing.</p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <a class="ui tiny image">
+      <img src="/images/avatar/large/veronika.jpg">
+    </a>
+    <div class="content">
+      <a class="header">Veronika Ossi</a>
+      <div class="description">
+        <p>Veronika Ossi is a set designer living in New York who <a>enjoys</a> kittens, music, and partying.</p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <a class="ui tiny image">
+      <img src="/images/avatar/large/jenny.jpg">
+    </a>
+    <div class="content">
+      <a class="header">Jenny Hess</a>
+      <div class="description">
+        <p>Jenny is a student studying Media Management at <a>the New School</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui divided items">
+  <div class="item">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <a class="header">12 Years a Slave</a>
+      <div class="meta">
+        <span class="cinema">Union Square 14</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">
+        <div class="ui label">IMAX</div>
+        <div class="ui label"><i class="globe icon"></i> Additional Languages</div>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <a class="header">My Neighbor Totoro</a>
+      <div class="meta">
+        <span class="cinema">IFC Cinema</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">
+        <div class="ui right floated primary button">
+          Buy tickets
+          <i class="right chevron icon"></i>
+        </div>
+        <div class="ui label">Limited</div>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <a class="header">Watchmen</a>
+      <div class="meta">
+        <span class="cinema">IFC</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">
+        <div class="ui right floated primary button">
+          Buy tickets
+          <i class="right chevron icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui feed">
+  <div class="event">
+    <div class="label">
+      <i class="pencil icon"></i>
+    </div>
+    <div class="content">
+      <div class="summary">
+        You posted on your friend <a>Stevie Feliciano's</a> wall.
+        <div class="date">Today</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui breadcrumb">
+  <a class="section">Home</a>
+  <div class="divider"> / </div>
+  <a class="section">Store</a>
+  <div class="divider"> / </div>
+  <div class="active section">T-Shirt</div>
+</div>
+
+
+<div class="ui huge breadcrumb">
+  <a class="section">Home</a>
+  <i class="right chevron icon divider"></i>
+  <a class="section">Registration</a>
+  <i class="right chevron icon divider"></i>
+  <div class="active section">Personal Information</div>
+</div>
+
+
+</body>
+</html>

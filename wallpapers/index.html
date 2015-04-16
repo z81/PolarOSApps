@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="./PhotoSwipe/dist/photoswipe.css"> 
+    <link rel="stylesheet" href="./PhotoSwipe/dist/default-skin/default-skin.css"> 
+    <script src="./PhotoSwipe/dist/photoswipe.min.js"></script> 
+    <script src="./PhotoSwipe/dist/photoswipe-ui-default.min.js"></script> 
+
+    <script src="../../vendor.js"></script>
+    <script src="../../apps_api.js"></script>
+</head>
+<body>
+
+
+
+<style> 
+    html,body {
+        padding: 0;
+        margin: 0;
+    }
+    img.small {
+        width: 320px;
+        height: 200px;
+        margin-top: -4px;
+        box-sizing: border-box;
+    }
+    img.active {
+        border: 3px solid rgb(53, 185, 253);
+    }
+    div.bot-pannel {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background: rgb(236, 234, 234);
+          border-top: 1px solid rgb(77, 77, 77);
+    }
+
+    .right {
+        float: right;
+    }
+
+    .buttons {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .images {
+        margin-bottom: 28px;
+    }
+</style>
+
+
+
+<script>
+
+
+var wallpapers = [];
+
+AppsAPI.get('user.background', function(background) {
+    AppsAPI.get('wallpapers', function(images) {
+        var items = images;
+        var active = null;
+        var imagesListEl = document.querySelector('div.images');
+
+        items.map(function(i, idx){
+            var img = document.createElement('img');
+            img.src = i.src;
+            img.className = "small";
+            img.idx = idx;
+
+            if(i.src === background) {
+                img.className = "small active";
+                active = img;
+            }
+
+            img.onclick = function() {
+                    this.className = "small active";
+                    if(active !== null && active != this) {
+                        active.className = "small";
+                    }
+                    active = this;
+                    AppsAPI.set('user.background', img.src); 
+            }
+
+            imagesListEl.appendChild(img)
+            
+        })
+
+        document.querySelector('button#save').onclick = function() {
+            //document.querySelector('select').value
+            AppsAPI.set('user.background', items[active.idx].src); 
+        }
+
+    })
+
+})
+
+
+</script>
+
+<div class="images">
+    
+</div>
+<div class="bot-pannel">
+    <div class="right buttons">
+        <button id="save">Сохранить</button>
+    </div>
+</div>
+</body>
+</html>
