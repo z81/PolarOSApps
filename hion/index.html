@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.png"/>
+
+    <title>Hion 2.0</title>
+    <link rel="stylesheet" href="assets/styles/main.min.css"/>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/scripts/vendors/angular.min.js"></script>
+    <script src="assets/refills/dist/all.min.js"></script>
+
+</head>
+<body class="index" ng-controller="mainCtrl" scroll-position="scroll">
+    <div navigation menu="menu"></div>
+
+    <!--
+        Tools
+    -->
+    <div class="tools" ng-class="{'topnull': scroll}">
+        <span class="tools-item">
+            <img class="tools-icon" src="assets/images/play.png" alt=""/>
+        </span>
+        <span class="tools-item">
+            <img class="tools-icon" src="assets/images/save-icon.png" alt=""/>
+        </span>
+        <span class="tools-item">
+            <img class="tools-icon" src="assets/images/Very-Basic-Undo-icon.png" alt=""/>
+        </span>
+        <span class="tools-item">
+            <img class="tools-icon" src="assets/images/Very-Basic-Redo-icon.png" alt=""/>
+        </span>
+        <span class="tools-item" ng-click="closeContainer()">
+            <img class="tools-icon" src="assets/images/leftarrow.png" alt=""/>
+        </span>
+         <span class="tools-item">
+            <img class="tools-icon" src="assets/images/rightarrow.png" alt=""/>
+        </span>
+        <span class="tools-item compiler">
+            Компилятор: <select name="compiler" id="compiler">
+                <option value="Delphi">Delphi</option>
+                <option value="FPC">FPC</option>
+            </select>
+        </span>
+
+    </div>
+
+    <section class="container">
+        <section class="inner-content">
+            <div class="refills-wrapper">
+
+                <div id="scheme"></div>
+
+
+            </div>
+
+        </section>
+    </section>
+
+    <div class="elements-panel" ng-controller="panelCtrl"
+         ng-class="{'elements-panel-hidden': elements_panel_open, 'topnull': scroll}"
+         ng-mouseleave="elements_panel_open = elements_panel_pin ? true : elements_panel_open"
+         ng-mouseenter="elements_panel_open = elements_panel_pin ? false : elements_panel_open" >
+        <div class="panel-header">
+            <span class="elements-icon"></span>
+            Элементы
+            <span class="panel-button">
+                <span class="panel-pin" ng-class="{'yellow-pin': elements_panel_pin}" ng-click="togglePanelPin('elements_panel_pin')"></span>
+                <span class="panel-add">
+                    <div class="panel-add-size-fix">+</div>
+                </span>
+                <span class="panel-min" ng-click="togglePanel('elements_panel_open')">
+                    <div class="panel-min-size-fix">_</div>
+                </span>
+            </span>
+        </div>
+        <input type="text" class="element-search" ng-model="element_search" placeholder=" Найти..."/>
+        <div class="panel-body">
+            <ul class="accordion elements-list">
+                <li ng-repeat="group in elements" ng-if="(group.elements|filter:element_search).length > 0" ng-show="group.eng.length">
+                    <a href="javascript:void(0)" ng-click="close = !close" class="js-accordion-trigger">{{group.ru}}</a>
+                    <ul class="submenu" ng-if="close">
+                        <li ng-repeat="el in group.elements | filter:element_search" ng-if="el.eng[0] != '*'">
+                            <div class="tooltip-item element-icon-wrapper">
+                                <img class="element-icon" ng-click="addElement(el.eng)" height="32" width="32" ng-src="hiasm/delphi/icon/{{el.eng}}.ico" alt="{{el.ru}}"/>
+                                <div class="tooltip">
+                                    <p>{{el.ru}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="props-panel" ng-controller="panelCtrl"
+         ng-class="{'props-panel-hidden': props_panel_hidden, 'topnull': scroll}"
+         ng-mouseleave="props_panel_hidden = props_panel_pin ? true : props_panel_hidden"
+         ng-mouseenter="props_panel_hidden = props_panel_pin ? false : props_panel_hidden" >
+        <div class="panel-header">
+           <span class="props-icon"></span> Свойства
+            <span class="panel-button">
+                <span class="panel-pin" ng-class="{'yellow-pin': props_panel_pin}" ng-click="togglePanelPin('props_panel_pin')"></span>
+                <span class="panel-add"><div class="panel-add-size-fix">+</div></span>
+                <span ng-click="togglePanel('props_panel_hidden')" class="panel-min"><div class="panel-min-size-fix">_</div></span>
+            </span>
+        </div>
+        <div class="panel-body">
+            <table class="table-borders">
+                <thead>
+                <tr>
+                    <th>Свойство</th>
+                    <th>Значение</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="prop in props">
+                    <td>
+                        <input ng-if="prop.doWork" type="checkbox"/>
+                        {{prop.name}}
+                    </td>
+                    <td class="prop-edit">
+                        <input ng-if="prop.type == '1'" type="number" min="{{prop.list.split(',')[0]}}" max="{{prop.list.split(',')[1]}}" ng-model="prop.value" step="1"/>
+                        <input ng-if="prop.type == '2'" type="text" ng-model="prop.value"/>
+                        <input ng-if="prop.type == '3'" type="text" ng-model="prop.value"/>
+                        <select ng-if="prop.type.indexOf('4') > -1">
+                            <option ng-repeat="item in prop.list.split(',')" value="item">{{item}}</option>
+                        </select>
+                        <div ng-if="prop.type == '141'"  class="switch-container">
+                            <input type="checkbox" id="switch-toggle-1" name="switch-toggle" class="switch-checkbox" checked/>
+                            <label class="switch-label" for="switch-toggle-1">
+                                <div class="switch-inner"></div>
+                                <div class="switch-toggle-switch"></div>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="message">Пример уведомления! Успешно!!!!!</div>
+
+    <div footer logo="menu.logo"></div>
+
+
+    <script>
+        $(function () {
+            var menu = $('#navigation-menu');
+            var menuToggle = $('#js-mobile-menu');
+
+            $(menuToggle).on('click', function (e) {
+                e.preventDefault();
+                menu.slideToggle(function () {
+                    if (menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="./assets/scripts/vendors/angular-cookies.min.js"></script>
+    <script src="./assets/scripts/vendors/stats.min.js"></script>
+    <script src="./assets/scripts/vendors/pixi.js"></script>
+    <script src="./assets/scripts/vendors/ini.js"></script>
+    <script src="./assets/scripts/pixiAdapter.min.js"></script>
+    <script src="./assets/scripts/config.min.js"></script>
+    <script src="./assets/scripts/sha.min.js"></script>
+    <script src="./assets/scripts/scheme.min.js"></script>
+    <script src="./assets/scripts/app.js"></script>
+
+</body>
+</html>

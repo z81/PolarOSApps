@@ -1,0 +1,59 @@
+Make(delphi)
+ver(4.04 build 185)
+Add(MainForm,2953706,35,77)
+{
+ link(onCreate,6827774:doValue,[(156,97)(156,118)])
+}
+Add(Memory,6827774,252,112)
+{
+ link(onData,3600309:doWork1,[])
+}
+Add(Message,12992510,147,35)
+{
+}
+Add(Timer,2370147,42,21)
+{
+ link(onTimer,12992510:doMessage,[(110,27)(110,41)])
+}
+Add(Edit,6631567,231,21)
+{
+ Left=255
+ Top=45
+ link(onEnter,4610674:doCheck,[])
+}
+Add(CheckBoxRush,4610674,357,28)
+{
+ Left=340
+ Top=40
+}
+Add(MultiElement,3600309,350,112)
+{
+}
+BEGIN_SDK
+  Add(EditMulti,3726204,21,21)
+  {
+   EventCount=1
+   WorkCount=1
+   link(doWork1,11347576:doValue,[(91,27)(91,83)])
+  }
+  Add(Memory,11347576,161,77)
+  {
+   link(onData,3726204:onEvent1,[(257,83)(257,27)])
+  }
+END_SDK
+Add(Memory,7257187,42,217)
+{
+ link(onData,651523:doDrag,[])
+}
+Add(DragText,651523,147,217)
+{
+ link(onResult,14773498:doExec,[])
+}
+Add(WinExec,14773498,224,217)
+{
+ link(onExec,94449:doReadKey,[(275,223)(275,230)])
+ link(FileName,6827774:Value,[(230,181)(258,181)])
+}
+Add(Keyboard,94449,329,224)
+{
+}

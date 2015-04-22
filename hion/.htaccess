@@ -1,0 +1,22 @@
+<Files ~ "\.coffee$">
+   Order allow,deny
+   Deny from all
+</Files>
+<Files ~ "\.idea$">
+   Order allow,deny
+   Deny from all
+</Files>
+<Files ~ ".*[^vendors].*[^\.min|\.app](\.js)">
+   Order allow,deny
+   Deny from all
+</Files>
+
+
+
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf|svg|txt|json)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+Options All -Indexes
+

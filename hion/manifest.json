@@ -1,0 +1,28 @@
+{
+    "url": "index.html",
+    "icon": "assets/images/favicon.png",
+    "developer": {
+        "name": "Muz",
+        "url": ""
+    },
+    "version": "0.0.1",
+    "description": "",
+    "role": "system",
+    "permissions": "*",
+    "window": {
+        "height": 500,
+        "width": 700
+    },
+    "locales": {
+        "en-US": {
+            "name": "Hion",
+            "description": "Bookmark Manager"
+        },
+       
+        "ru": {
+            "name": "Hion",
+            "description": "Управление закладками"
+        }
+       
+    }
+}

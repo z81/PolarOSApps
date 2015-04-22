@@ -1,0 +1,15 @@
+<header class="navigation">
+    <div class="menu-wrapper">
+        <a href="javascript:void(0)" class="logo">
+            <img ng-src="{{menu.logo}}" alt="">
+        </a>
+
+        <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
+
+        <div class="nav">
+            <ul id="navigation-menu">
+                <li ng-repeat="item in menu.items"><a href="{{item.url}}">{{item.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
